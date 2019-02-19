@@ -12,6 +12,12 @@ h1,h2 {
   font-size: 40px;
   margin-top: 40px;
 }
+.quiz-questions{
+margin-block-start: 1em;
+padding-inline-start: 0px;
+color:blue;
+}
+
 .green{
   color:#97FFAA;
 }
