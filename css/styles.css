@@ -1,22 +1,24 @@
 * {
     box-sizing: border-box;
 }
-
 body {
   background-color: #5593B2;
   font-family: 'Montserrat', sans-serif;
 }
-
 h1,h2 {
   color:#FF9919;
 }
-
 .initial-header{
   font-size: 40px;
   margin-top: 40px;
 }
 .green{
   color:#97FFAA;
+}
+.image-centered{
+  display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 .container {
 display: block;
@@ -27,9 +29,7 @@ margin: auto;
 .choice {
   width:150px;
   height:150px;
-
 }
-
 
 .go-button{
   font-size: 33px;
@@ -43,9 +43,49 @@ button.start  {
   width:400px;
   border:none;
 }
-.button_hover:hover{
+
+
+button.choice:hover{
   background:#FFD16C;
-  margin:0px;
+  height:200px;
+  width:200px;
+}
+
+.img-end-screen{
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  margin-top: 80px;
+  width: 40%;
+
+}
+.image-centered-cross {
+  display:none;
+  margin-right: auto;
+  margin-left: auto;
+}
+.image-centered-check {
+  display:none;
+  margin-right: auto;
+  margin-left: auto;
+}
+.no-pass-header{
+  margin-left: auto;
+  display: block;
+  margin-top: 50px;
+  text-align: center;
+  }
+
+.checkmark {
+display: block;
+width:150px;
+margin-bottom:20px;
+
+}
+.cross {
+display: block;
+width:150px;
+margin-bottom:20px;
 }
 .question{
   font-family: 'Montserrat', sans-serif;
@@ -54,8 +94,17 @@ button.start  {
   list-style: none;
   padding: 10px;
   -webkit-padding-start: 0px;
+  background:#FFA96B
 }
 
+.flexContainer {
+    display: flex;
+    width:100%;
+}
+
+.Option {
+
+}
 
 @media only screen and (max-width: 600px) {
   button.start {

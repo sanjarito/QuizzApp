@@ -81,7 +81,7 @@ const QUESTIONS = [
       "C":"cd-player, peanuts, water",
       "D":"rope, cheetos, water"
     }],
-    "correct":"belay-device,rope,quickdraws"
+    "correct":"belay-device, rope, quickdraws"
   },
   {
     "status":"hidden",
