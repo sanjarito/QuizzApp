@@ -51,11 +51,7 @@ button.start  {
 }
 
 
-button.choice:hover{
-  background:#FFD16C;
-  height:200px;
-  width:200px;
-}
+
 
 .img-end-screen{
   margin-right: auto;
@@ -100,7 +96,9 @@ margin-bottom:20px;
   list-style: none;
   padding: 10px;
   -webkit-padding-start: 0px;
-  background:#FFA96B
+  background:#FFA96B;
+  width: 70%;
+  margin: auto;
 }
 
 .flexContainer {
@@ -117,4 +115,12 @@ margin-bottom:20px;
     height:200px;
     width:200px;
   }
+}
+
+@media only screen and (min-width:1000px){
+button.choice:hover{
+  background:#FFD16C;
+  height:200px;
+  width:200px;
+}
 }
