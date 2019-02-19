@@ -53,6 +53,7 @@ button.start  {
   color:white;
   list-style: none;
   padding: 10px;
+  -webkit-padding-start: 0px;
 }
 
 

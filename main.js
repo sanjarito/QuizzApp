@@ -3,6 +3,7 @@
 let questionNo = 0;
 let score=0;
 const totalQuestions = 10;
+console.log("main js starts")
 
 
   function startQuiz(){
