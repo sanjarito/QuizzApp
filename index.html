@@ -14,9 +14,16 @@
 
       <span class="score"></span>
       <span class="question-No"></span>
+      <span class="instructions"></span>
       <form id="js-climbing-quiz">
-        <div><img class='image-centered-check' src="images/checkmark.png" alt='correct answer checkmark'></div>
-        <div><img class='image-centered-cross' src="images/cross-icon.png" alt='incorrect answer cross'></div>
+        <div>
+          <img class='image-centered-check' src="images/checkmark.png" alt='correct answer checkmark'>
+        </div>
+
+        <div id="overlay" class="message-wrong-answer" >
+          <img class='image-centered-cross' src="images/cross-icon.png" alt='incorrect answer cross'>
+          <h1>The correct answer was: </h1>
+        </div>
 
       </form>
         <ul class="quiz-questions">
@@ -32,5 +39,6 @@
 			  crossorigin="anonymous"></script>
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="main.js"></script>
+
   </body>
 </html>

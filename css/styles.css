@@ -17,9 +17,12 @@ margin-block-start: 1em;
 -webkit-padding-start: 0px;
 
 }
-
+.instructions{
+  color:#e6e659;
+}
 .green{
   color:#97FFAA;
+  margin-top:10px;
 }
 .image-centered{
   display: block;
@@ -37,11 +40,22 @@ margin: auto;
   height:150px;
 }
 
+.choiceA{
+  background-image: url("../images/OptionA.png")
+}
+.choiceB{
+  background-image: url("../images/OptionB.png")
+}
+.choiceC {
+  background-image: url("../images/OptionC.png")
+}
+.choiceD {
+  background-image: url("../images/OptionD.png")
+}
 .go-button{
   font-size: 33px;
   font:
 }
-
 button.start  {
   margin-top: 100px;
   border-radius: 50%;
@@ -49,10 +63,6 @@ button.start  {
   width:400px;
   border:none;
 }
-
-
-
-
 .img-end-screen{
   margin-right: auto;
   margin-left: auto;
@@ -88,6 +98,7 @@ margin-bottom:20px;
 display: block;
 width:150px;
 margin-bottom:20px;
+margin-top: 200px;
 }
 .question{
   font-family: 'Montserrat', sans-serif;
@@ -101,13 +112,43 @@ margin-bottom:20px;
   margin: auto;
 }
 
+.answer{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color:white;
+  list-style: none;
+  padding: 10px;
+  -webkit-padding-start: 0px;
+  background:grey;
+  width: 70%;
+  margin: auto;
+}
 .flexContainer {
     display: flex;
     width:100%;
 }
+.score-header{
+  text-align: center;
+}
 
-.Option {
-
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+  cursor: pointer;
+}
+.message-wrong-answer{
+  display:none;
+}
+.show-it{
+  display:block;
 }
 
 @media only screen and (max-width: 600px) {
@@ -116,11 +157,8 @@ margin-bottom:20px;
     width:200px;
   }
 }
-
-@media only screen and (min-width:1000px){
-button.choice:hover{
-  background:#FFD16C;
-  height:200px;
-  width:200px;
-}
+@media only screen and (max-width: 400px) {
+  .instructions{
+    display:none;
+  }
 }

@@ -9,7 +9,7 @@ const QUESTIONS = [
       "C":"An element of Risk",
       "D":"All of the above"
     }],
-    "correct":"All of the above"
+    "correct":"D"
   },
   {
     "status":"hidden",
@@ -21,7 +21,7 @@ const QUESTIONS = [
       "C":"Post on facebook about it",
       "D":"Nothing"
     }],
-    "correct":"Get aquainted to the area"
+    "correct":"A"
   },
   {
     "status":"hidden",
@@ -33,7 +33,7 @@ const QUESTIONS = [
       "C":"Post about it on instagram",
       "D":"None of the above"
     }],
-    "correct":"Go with someone"
+    "correct":"A"
   },
   {
     "status":"hidden",
@@ -45,7 +45,7 @@ const QUESTIONS = [
       "C":"Outside is more dangerous",
       "D":"More people outside"
     }],
-    "correct":"Outside routes are not marked"
+    "correct":"B"
   },
   {
     "status":"hidden",
@@ -57,7 +57,7 @@ const QUESTIONS = [
       "C":"Taping Holds as markers",
       "D":"Stick cliping"
     }],
-    "correct":"Taping Holds as markers"
+    "correct":"C"
   },
   {
     "status":"hidden",
@@ -69,7 +69,7 @@ const QUESTIONS = [
       "C":"Pinches",
       "D":"none of the above"
     }],
-    "correct":"none of the above"
+    "correct":"D"
   },
   {
     "status":"hidden",
@@ -81,7 +81,7 @@ const QUESTIONS = [
       "C":"cd-player, peanuts, water",
       "D":"rope, cheetos, water"
     }],
-    "correct":"belay-device, rope, quickdraws"
+    "correct":"B"
   },
   {
     "status":"hidden",
@@ -93,7 +93,7 @@ const QUESTIONS = [
       "C":"Dangerous",
       "D":"Skin Shredder"
     }],
-    "correct":"Skin Shredder"
+    "correct":"D"
   },
   {
     "status":"hidden",
@@ -105,7 +105,7 @@ const QUESTIONS = [
       "C":"Venga",
       "D":"cheetos"
     }],
-    "correct":"cheetos"
+    "correct":"D"
   },
   {
     "status":"hidden",
@@ -117,7 +117,7 @@ const QUESTIONS = [
       "C":"Dance",
       "D":"Leave no trace behind"
     }],
-    "correct":"Leave no trace behind"
+    "correct":"D"
   },
 
 
