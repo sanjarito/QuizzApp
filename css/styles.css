@@ -38,6 +38,7 @@ margin: auto;
 .choice {
   width:150px;
   height:150px;
+  cursor: pointer;
 }
 
 .choiceA{
