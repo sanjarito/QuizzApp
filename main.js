@@ -24,7 +24,7 @@ $(document).ready(function(){
           $('.quiz-questions').append('<li class="question">'+'Question '+`${questionNo+1}`+' : ' + QUESTIONS[questionNo]["question"] + '</li>')
           $('.quiz-questions').append(`<li class="answer"></li>`)
           $('#js-climbing-quiz').append(`
-          <input type="button" alt="Option A Button" class="choice choiceA" value="A"></input>
+          <a><input type="button" alt="Option A Button" class="choice choiceA" value="A"></input></a>
           <input type="button" alt="Option B Button" class="choice choiceB" value="B"></input>
           <input type="button" alt="Option C Button" class="choice choiceC" value="C"></input>
           <input type="button" alt="Option D Button" class="choice choiceD" value="D"></input>
