@@ -54,7 +54,7 @@ $(document).ready(function(){
 
                 </select>
                 </div>
-                <br>
+
 
 
                 <button class="mobile-submit">Submit</button>
@@ -74,6 +74,7 @@ $(document).ready(function(){
                   $( "" ).replaceAll( ".question" );
                   $( "" ).replaceAll( ".mobile-submit" );
                   $( "" ).replaceAll( ".mobile-answer-choice-div" );
+                  $( "" ).replaceAll( ".choice" );
                   score +=1
                   $('.image-centered-check').addClass('checkmark')
                   $('.image-centered-check').fadeIn('fast')
@@ -86,6 +87,7 @@ $(document).ready(function(){
                   $( "" ).replaceAll( ".question" );
                   $( "" ).replaceAll( ".mobile-submit" );
                   $( "" ).replaceAll( ".mobile-answer-choice-div" );
+                  $( "" ).replaceAll( ".choice" );
                   wronganswerscreen(questionNo,correct_answer_text)
 
 

@@ -4,7 +4,24 @@
 body {
   background-color: #5593B2;
   font-family: 'Montserrat', sans-serif;
+
+
 }
+
+.container::after {
+  content: "";
+  background-image: url('../images/Climbing-background.jpg');
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
 h1,h2 {
   color:#FF9919;
 }
@@ -34,6 +51,7 @@ display: block;
 width: 90%;
 text-align: center;
 margin: auto;
+margin-top: 50px;
 }
 .choice {
   width:150px;
@@ -58,7 +76,7 @@ margin: auto;
   font:
 }
 button.start  {
-  margin-top: 100px;
+  margin-top: 40px;
   border-radius: 50%;
   height:400px;
   width:400px;
@@ -109,7 +127,7 @@ margin-top: 200px;
   padding: 10px;
   -webkit-padding-start: 0px;
   background:#FFA96B;
-  width: 70%;
+  width: 90%;
   margin: auto;
 }
 
@@ -163,11 +181,10 @@ margin-top: 200px;
 .mobile-answer-choice-div{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
   height: 80px;
   background-color: darkseagreen;
   border-radius: 7px;
-  width: 70%;
+  width: 90%;
 }
 
 .mobile-label-answer{
@@ -181,7 +198,7 @@ margin-top: 200px;
     width:200px;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 680px) {
   .instructions{
     display:none;
   }
