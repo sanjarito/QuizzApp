@@ -34,62 +34,104 @@ $(document).ready(function(){
             let letterVariable = $(this)[0]["value"]
             $('.answer').text("Your Answer : "+ QUESTIONS[questionNo]["answers"][0][letterVariable])
           })
-          $('.choice').on('touchstart', function (e) {
-            console.log('caca')
-            'use strict'; //satisfy code inspectors
-            var link = $(this); //preselect the link
-            if (link.hasClass('hover')) {
-                return true;
+
+
+            var isMobile = window.matchMedia("only screen and (max-width: 680px)").matches;
+
+            if (isMobile) {
+              console.log('is Mobile triggered TRUE')
+              $('#js-climbing-quiz').find('input').hide()
+              $('.container').find('li.answer').hide()
+              $('#js-climbing-quiz').append(`
+                <div class="mobile-answer-choice-div">
+                <label class="mobile-label-answer" for="Answer_choice">Choose an answer:</label>
+                <select id="mobile-choice">
+                    <option value="">Please choose an answer</option>
+                    <option value="A">${QUESTIONS[questionNo]["answers"][0]['A']}</option>
+                    <option value="B">${QUESTIONS[questionNo]["answers"][0]['B']}</option>
+                    <option value="C">${QUESTIONS[questionNo]["answers"][0]['C']}</option>
+                    <option value="D">${QUESTIONS[questionNo]["answers"][0]['D']}</option>
+
+                </select>
+                </div>
+                <br>
+
+
+                <button class="mobile-submit">Submit</button>
+                `)
+
+              $('#js-climbing-quiz').one('click','.mobile-submit',function(e){
+                e.preventDefault()
+                let mobileAnswerChoices = document.getElementById("mobile-choice")
+                let  mobileAnswerChoice = mobileAnswerChoices.options[mobileAnswerChoices.selectedIndex].value;
+                let correct_answer = QUESTIONS[questionNo]["correct"]
+                let correct_answer_text = QUESTIONS[questionNo]["answers"][0][correct_answer]
+                console.log(correct_answer + "   " + mobileAnswerChoice)
+
+                if (mobileAnswerChoice == correct_answer && questionNo != 9) {
+                  console.log("inside mobile...... right answer")
+                  questionNo += 1
+                  $( "" ).replaceAll( ".question" );
+                  $( "" ).replaceAll( ".mobile-submit" );
+                  $( "" ).replaceAll( ".mobile-answer-choice-div" );
+                  score +=1
+                  $('.image-centered-check').addClass('checkmark')
+                  $('.image-centered-check').fadeIn('fast')
+                  $('.image-centered-check').fadeOut(1000)
+                  createQuestions(questionNo)
+
+                } else if (mobileAnswerChoice != correct_answer && questionNo != 9) {
+                  console.log("inside mobile...... wrong answer")
+                  questionNo += 1
+                  $( "" ).replaceAll( ".question" );
+                  $( "" ).replaceAll( ".mobile-submit" );
+                  $( "" ).replaceAll( ".mobile-answer-choice-div" );
+                  wronganswerscreen(questionNo,correct_answer_text)
+
+
+
+                } else {
+                  if (mobileAnswerChoice == correct_answer){
+                    score +=1
+                  }
+                  endScreen(score)
+                }
+              })
             } else {
-                link.addClass('hover');
-                $('a.taphover').not(this).removeClass('hover');
+              $('#js-climbing-quiz').one('click','.choice', function(e){
                 e.preventDefault();
-                return false; //extra, and to make sure the function has consistent return points
+                console.log($(this)[0]["value"])
+
+                let user_choice = $(this)[0]["value"]
+                let correct_answer = QUESTIONS[questionNo]["correct"]
+                let correct_answer_text = QUESTIONS[questionNo]["answers"][0][correct_answer]
+
+                if (user_choice == correct_answer && questionNo != 9) {
+                  questionNo += 1
+                  $( "" ).replaceAll( ".question" );
+                  $( "" ).replaceAll( ".choice" );
+                  $( "" ).replaceAll( ".answer" );
+                  score +=1
+                  $('.image-centered-check').addClass('checkmark')
+                  $('.image-centered-check').fadeIn('fast')
+                  $('.image-centered-check').fadeOut(1000)
+                  createQuestions(questionNo)
+
+                } else if (user_choice != correct_answer && questionNo != 9) {
+                  console.log("wrong answer")
+                  questionNo += 1
+                  $( "" ).replaceAll( ".question" );
+                  $( "" ).replaceAll( ".choice" );
+                  $( "" ).replaceAll( ".answer" );
+                  wronganswerscreen(questionNo,correct_answer_text)
+                } else {
+                  if (user_choice == correct_answer){
+                    score +=1
+                  }
+                  endScreen(score)
+                }
+              })
             }
-});
-
-          $('#js-climbing-quiz').one('click','.choice', function(e){
-            e.preventDefault();
-            console.log($(this)[0]["value"])
-
-            let user_choice = $(this)[0]["value"]
-            let correct_answer = QUESTIONS[questionNo]["correct"]
-            let correct_answer_text = QUESTIONS[questionNo]["answers"][0][correct_answer]
-
-
-
-            if (user_choice == correct_answer && questionNo != 9) {
-              questionNo += 1
-              $( "" ).replaceAll( ".question" );
-              $( "" ).replaceAll( ".choice" );
-              $( "" ).replaceAll( ".answer" );
-
-              score +=1
-              $('.image-centered-check').addClass('checkmark')
-              $('.image-centered-check').fadeIn('fast')
-              $('.image-centered-check').fadeOut(1000)
-
-              createQuestions(questionNo)
-
-            } else if (user_choice != correct_answer && questionNo != 9) {
-              console.log("wrong answer")
-              questionNo += 1
-              $( "" ).replaceAll( ".question" );
-              $( "" ).replaceAll( ".choice" );
-              $( "" ).replaceAll( ".answer" );
-
-
-              wronganswerscreen(questionNo,correct_answer_text)
-
-
-
-            } else {
-              if (user_choice == correct_answer){
-                score +=1
-              }
-              endScreen(score)
-            }
-          })
       };
 
     function endScreen(score){

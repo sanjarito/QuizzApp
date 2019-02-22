@@ -38,7 +38,7 @@ margin: auto;
 .choice {
   width:150px;
   height:150px;
-  
+
 }
 
 .choiceA{
@@ -151,6 +151,29 @@ margin-top: 200px;
 .show-it{
   display:block;
 }
+.mobile-submit{
+  margin-top: 20px;
+  width: 150px;
+  height: 30px;
+  padding: 5px;
+  background-color: #f9f766;
+  border: none;
+  border-radius: 5px;
+}
+.mobile-answer-choice-div{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  height: 80px;
+  background-color: darkseagreen;
+  border-radius: 7px;
+  width: 70%;
+}
+
+.mobile-label-answer{
+  display:block;
+  padding:10px
+}
 
 @media only screen and (max-width: 600px) {
   button.start {
@@ -162,4 +185,9 @@ margin-top: 200px;
   .instructions{
     display:none;
   }
+}
+
+/* Mobile devices only */
+@media only screen and (max-width: 600px) {
+
 }
