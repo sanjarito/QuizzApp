@@ -29,13 +29,24 @@ $(document).ready(function(){
           <input type="button" alt="Option C Button" class="choice choiceC" value="C"></input>
           <input type="button" alt="Option D Button" class="choice choiceD" value="D"></input>
           `)
-
-
           $('.choice').hover(function(e){
             e.stopPropagation()
             let letterVariable = $(this)[0]["value"]
             $('.answer').text("Your Answer : "+ QUESTIONS[questionNo]["answers"][0][letterVariable])
           })
+          $('.choice').on('touchstart', function (e) {
+            console.log('caca')
+            'use strict'; //satisfy code inspectors
+            var link = $(this); //preselect the link
+            if (link.hasClass('hover')) {
+                return true;
+            } else {
+                link.addClass('hover');
+                $('a.taphover').not(this).removeClass('hover');
+                e.preventDefault();
+                return false; //extra, and to make sure the function has consistent return points
+            }
+});
 
           $('#js-climbing-quiz').one('click','.choice', function(e){
             e.preventDefault();
