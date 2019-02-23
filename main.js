@@ -46,7 +46,6 @@ $(document).ready(function(){
                 <div class="mobile-answer-choice-div">
                 <label class="mobile-label-answer" for="Answer_choice">Choose an answer:</label>
                 <select id="mobile-choice">
-                    <option value="">Please choose an answer</option>
                     <option value="A">${QUESTIONS[questionNo]["answers"][0]['A']}</option>
                     <option value="B">${QUESTIONS[questionNo]["answers"][0]['B']}</option>
                     <option value="C">${QUESTIONS[questionNo]["answers"][0]['C']}</option>
